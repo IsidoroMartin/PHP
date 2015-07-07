@@ -1,0 +1,42 @@
+@font-face {
+    font-family: "Heartstone";
+    src: url(../fuentes/heartstone) format("truetype");
+}
+*{
+     cursor:url('../img/cursor/ceopen.png'), help;
+    padding: 0px;
+    margin: 0px;
+    font-family: "Heartstone";
+}
+body{
+     
+    background-image: url(../img/hearthstone-deck.jpg) ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+/*    width:100%; 
+    margin:auto; 
+    min-width:500px; */
+}
+
+#mainButton{
+    margin-top: 20%;
+    text-align: center;
+}
+#mainButtonIndex{
+    margin-top: 20%;
+    text-align: center;
+}
+#mainButton img:hover{
+    padding: 20px;
+    
+}
+#sonido{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+
