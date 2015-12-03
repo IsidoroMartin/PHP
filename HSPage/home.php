@@ -28,7 +28,7 @@ and open the template in the editor.
                 <h1>¡Bienvenido a HEARTSTONE!</h1>
             </div>
             <div class="cuerpo">
-                <iframe src="https://player.vimeo.com/video/91599263" width="800" height="481" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+                <!--<iframe src="https://player.vimeo.com/video/91599263" width="800" height="481" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
             </div>
             <div class="título">
                 <h2>Enfunda tu espada,</h2>

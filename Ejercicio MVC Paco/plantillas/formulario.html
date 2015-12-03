@@ -1,0 +1,21 @@
+<h1>Solicitud de información: paso 1</h1>
+{error}
+<form action = "{scriptUrl}" method = "post" enctype="multipart/form-data">
+    {ocultosCiudades}
+    {ocultosMedios}
+    <label for="nombre" {validacionNombre}>Nombre * </label>
+    <input type = "text" name = "nombre" id="nombre" value="{valorNombre}"/>
+    <label for="apellidos" {validacionApellidos}>Apellidos*</label>
+    <input type = "text" name = "apellidos" id="apellidos" value="{valorApellidos}"/><br><br>
+    <br><label for="direccion" {validacionDireccion}>Dirección*</label>
+    <input type = "text" name = "direccion" id="direccion" value="{valorDireccion}"/><br><br>
+    <br><label for="telefono" {validacionTelefono}>Teléfono movil*</label>
+    <input type = "text" name = "telefono" id="telefono" value="{valorTelefono}"/><br><br>
+    <br><label for="email" {validacionEmail}>Email*</label>
+    <input type = "text" name = "email" id="email" value="{valorEmail}"/><br><br>
+    <br><label for="foto1" {validacionFoto}>Foto*</label>
+    <input type = "file" name = "foto1" id="foto1"/><br><br>
+    <input type = "submit" name="toStep2" value="Next >">
+
+</form>
+<!--<fieldset>-->

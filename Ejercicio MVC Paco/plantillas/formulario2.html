@@ -1,0 +1,23 @@
+<h1>Solicitud información: paso 2</h1>
+<form method="POST" action="{scriptUrl}">
+    <input type="hidden" name="nombre" value="{valorNombre}"/>
+    <input type="hidden" name="apellidos" value="{valorApellidos}"/>
+    <input type="hidden" name="direccion" value="{valorDireccion}"/>
+    <input type="hidden" name="telefono" value="{valorTelefono}"/>
+    <input type="hidden" name="email" value="{valorEmail}"/>
+    <input type="hidden" name="foto1" value="{valorFoto}"/>
+    <label for="ciudades">¿Sobre qué ciudades deseas información sobre ofertas de viajes, hoteles y vuelos</label>
+    <br><select multiple name="ciudades[]">
+        <option{checkSelectedOrCheckedCiudad Roma}>Roma</option>
+        <option{checkSelectedOrCheckedCiudad Paris}>Paris</option>
+        <option{checkSelectedOrCheckedCiudad NuevaYork}>Nueva York</option>
+        <option{checkSelectedOrCheckedCiudad Londres}>Londres</option>
+        <option{checkSelectedOrCheckedCiudad Berlin}>Berlin</option>
+        <option{checkSelectedOrCheckedCiudad Atenas}>Atenas</option>
+    </select>
+    <br><label>¿Por qué medio deseas recibir la información?</label>
+    <br><label>Correo postal</label> <input type="checkbox" {checkSelectedOrChecked correoPostal} name="medios[]" value="correoPostal"/>
+    <br><label>Email</label> <input type="checkbox" name="medios[]" {checkSelectedOrChecked email} value="email"/>
+    <br> <input type="submit" name="toStep1" value="< Back"/>
+    <input type="submit" name="toStep3" value="Next >"/>
+</form>
