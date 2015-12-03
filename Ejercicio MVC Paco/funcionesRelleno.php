@@ -47,13 +47,13 @@ function checkSelectedOrChecked($nombreCampo, $valorCampoAValidar, $type) {
 
 //Función que remarca en rojo los campos obligatorios no rellenados
 function validateField($nombreCampo, $camposPendientes, $camposErroneos, $mensajeErrorImagen = "correcto") {
-    if ($mensajeErrorImagen != "correcto") {
-        return ' class="error3"';
-    }
     if (in_array($nombreCampo, $camposPendientes)) {
         return ' class="error2"';
     }
     if (in_array($nombreCampo, $camposErroneos)) {
-        return ' class="error1"';
+        if (preg_match("/foto/", $nombreCampo))
+            return ' class="error3"';
+        else
+            return ' class="error1"';
     }
 }

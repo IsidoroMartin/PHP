@@ -24,14 +24,13 @@ function validaCampos($camposObligatorios, &$camposPendientes, &$camposErroneos)
                 }
             }
         } else {
-            if (($mensaje = validaImagen($campoObligatorio)) != "correcto")
-                $camposErroneos[] = $campoObligatorio;
+            $mensaje = validaImagen($campoObligatorio, $camposPendientes, $camposErroneos);
         }
     }
     return $mensaje;
 }
 
-function validaImagen($imagen) {
+function validaImagen($imagen, &$camposPendientes, &$camposErroneos) {
     $mensaje = "";
     if (isset($_FILES[$imagen])) {
         if ($_FILES[$imagen]["error"] == UPLOAD_ERR_OK) {
@@ -39,8 +38,10 @@ function validaImagen($imagen) {
             if (($foto["type"] != "image/pjpeg") && ($foto["type"] != "image/jpeg")
                     && ($foto["type"] != "image/png")) {
                 $mensaje = "Solo se pueden subir imágenes JPG, JPEG o PNG";
+                $camposErroneos[] = $imagen;
             } elseif (!move_uploaded_file($foto["tmp_name"], "files/" . basename($foto["name"]))) {
                 $mensaje = "Lo sentimos, hubo un problema al subir esa foto." . $foto["error"];
+                $camposErroneos[] = $imagen;
             } else {
                 $mensaje = "correcto";
             }
@@ -49,21 +50,22 @@ function validaImagen($imagen) {
             switch ($_FILES[$imagen]["error"]) {
                 case UPLOAD_ERR_INI_SIZE:
                     $mensaje .= "La foto es más grande de lo que permite el servidor.";
+                    $camposErroneos[] = $imagen;
                     break;
                 case UPLOAD_ERR_FORM_SIZE:
                     $mensaje .= "La foto es más grande de lo que permite el formulario.";
+                    $camposErroneos[] = $imagen;
                     break;
                 case UPLOAD_ERR_NO_FILE:
                     $mensaje .= "No se ha subido ningún archivo.";
+                    $camposPendientes[] = $imagen;
                     break;
                 default:
-                    $mensaje .= "Póngase en contacto con el administrador del servidor para
-obtener ayuda.";
+                    $mensaje .= "Póngase en contacto con el administrador del servidor para obtener ayuda.";
+                    $camposErroneos[] = $imagen;
             }
         }
-    } else {
-        $mensaje = "Debe introdicir una foto";
-    }
+    } 
     return $mensaje;
 }
 

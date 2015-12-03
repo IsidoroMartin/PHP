@@ -9,7 +9,7 @@ function veriForm1() {
     $camposPendientes = array();
     $camposErroneos = array();
     $mensajeErrorImagen = validaCampos($camposObligatorios, $camposPendientes, $camposErroneos);
-    if ($camposPendientes || $camposErroneos || $mensajeErrorImagen != "correcto") {
+    if ($camposPendientes || $camposErroneos) {
         displayForm1($camposPendientes, $camposErroneos, $mensajeErrorImagen);
     } else {
         procesForm1();
