@@ -1,0 +1,8 @@
+{errorLogin}
+{erroresValidacion}
+<form method="POST" action="index.php">
+    por favor, rellene sus datos a continuación y haga clic en Enviar. Los campos marcados con asterisco son obligatorios<br>
+    <label {validateFieldNombre}>Username</label><input type="text" name="nombre" value="{setValueNombre}"/>
+    <label {validateFieldPassword}>Password</label><input type="password" name="password" />
+    <br><input type="submit" name="submit" value="Login"/>
+</form>
