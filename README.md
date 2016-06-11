@@ -1,3 +1,3 @@
 # PHP
-Repositorio que contiene ejercicios de todos los cursos que he realizado
+Repositorio que contiene todos los proyectos y ejercicios relacionados con la tecnología PHP
 
