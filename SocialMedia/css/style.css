@@ -1,0 +1,49 @@
+.native-opt li a{
+	background-color:#f0871e;
+}
+.share-art .pin-art,.share-art  .lin-art{
+	display:none;
+}
+
+.post-body.entry-content .separator img {
+    height: auto;
+}
+
+li.li-home,a.read-more,.showpagePoint,.showpageNum a:hover, .showpage a:hover {
+    background: #FAB338;
+}
+.post h2 a:hover {
+    color: #FAB338;
+}
+
+.related-posts .related-tag {
+    display: none;
+}
+
+.footer-wrapper .copyright{
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: black;
+  opacity:0;
+}
+
+.postags{
+	display:none;
+}
+
+.trendy_counters ul li.count-facebook, .trendy_counters ul li.count-twitter{
+	width:49.55%;
+}
+@media  only screen and (max-width: 767px) {
+	.widget.Blog .blog-posts.hfeed .post-outer .post .block-image .thumb a {
+    	background-position:top!IMPORTANT;
+	}
+}
+.featured .post-tag:hover, .carousel-tag a:hover, .box-thumbnail .first-tag a:hover, .post-readmore a:hover, .postags a:hover, a.read-more:hover, .related-tag:hover, .g-tag a:hover{
+    background-color: #f0871e;
+}
+
+.native-opt li a:hover{
+	background-color: #f0871e;
+}
